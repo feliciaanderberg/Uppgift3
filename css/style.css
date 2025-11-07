@@ -120,7 +120,7 @@ main {
   justify-content: flex-start;
   background-color: #FFF5F7;
   border: 1px solid #FFE0E6;
-  padding: 12px;
+  padding: 10px;
   margin: 5px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: transform 0.5s ease;
@@ -272,6 +272,7 @@ textarea,
 select {
   padding: 10px;
   border: 1px solid #D8CFC5;
+  color: #3A2E26;
   background-color: #fff;
   font-family: inherit;
   font-size: 14px;
