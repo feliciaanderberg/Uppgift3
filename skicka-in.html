@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skicka in recept - CreamiLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="skicka-in">
+  <header>
+    <img src="image/creamilab-logo.png" alt="CreamiLab icon">
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="recept.html">Recept</a>
+      <a href="skicka-in.html">Skicka in ditt recept</a>
+      <a href="om-oss.html">Om oss</a>
+    </nav>
+  </header>
+
+  <main class="skicka-in-layout">
+    <h2>Skicka in ditt recept</h2>
+    
+    <form>
+
+      <label for="titel">Titel:</label><br>
+      <input type="text" id="titel" name="titel" placeholder="Namn på glassen" required><br><br>
+      
+      <p>Vilken maskin är receptet gjort med?</p>
+        <div class="maskin-val">
+            <label>
+                <input type="radio" id="creami" name="maskin" value="Creami" required>
+                Ninja Creami
+            </label>
+            <label>
+                <input type="radio" id="deluxe" name="maskin" value="Deluxe">
+                Ninja Creami Deluxe
+            </label>
+        </div><br>
+
+      <label for="kategori">Kategori:</label><br>
+      <select id="kategori" name="kategori">
+        <option>Klassisk</option>
+        <option>Vegansk</option>
+        <option>Laktosfri</option>
+        <option>Proteinrik</option>
+      </select><br><br>
+
+      <label for="program">Spinprogram:</label><br>
+      <select id="program" name="program">
+        <option>Ice cream</option>
+        <option>Lite ice cream</option>
+        <option>Sorbet</option>
+        <option>Gelato</option>
+        <option>Frozen yoghurt</option>
+      </select><br><br>
+
+      <label for="ingredienser">Ingredienser:</label><br>
+      <textarea id="ingredienser" rows="4" placeholder="Skriv ingredienser, en per rad" required></textarea><br><br>
+
+      <label for="instruktioner">Instruktioner:</label><br>
+      <textarea id="instruktioner" rows="4" placeholder="Skriv instruktioner" required></textarea><br><br>
+
+      <input type="submit" value="Skicka">
+      
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        <h4>CreamiLab</h4>
+        <p>Där Ninja Creami-magi händer!</p>
+    </div>
+    <div class="footer-content">
+        <h4>Kontakt</h4>
+        <p>Email: kontakt@creamilab.se</p>
+    </div>
+    <div class="footer-content">
+        <h4>Följ oss på Instagram!</h4>
+        <p>@CreamiLab</p>
+    </div>
+    <div class="footer-bottom">
+        <a href="rapport.html" class="rapport-knapp">Läs rapport</a>
+    </div>
+  </footer>
+</body>
+</html>

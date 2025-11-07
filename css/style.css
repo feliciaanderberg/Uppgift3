@@ -1,0 +1,551 @@
+/* ---------------- GRUNDSTIL ---------------- */
+html {
+  font-size: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FAF8F5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  grid-area: header;
+  background-color: #F2E8DF;
+  padding: 15px 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  height: auto;
+  width: 200px;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 15px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+nav a {
+  text-decoration: none;
+  width: 90%;
+  color: #4B3F36;
+  background-color: #FFEDE4;
+  padding: 8px 16px;
+  border: 1px solid #E0D6CE;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #FFD6C2;
+  color: #3A2E26;
+  transform: scale(1.05);
+}
+
+.lokal-nav-mobil {
+  grid-area: nav;
+  padding-top: 20px;
+}
+
+.lokal-nav {
+  display: none;
+}
+
+body.index nav a[href="index.html"],
+body.om-oss nav a[href="om-oss.html"],
+body.recept nav a[href="recept.html"],
+body.recept-glass nav a[href="recept-glass.html"],
+body.skicka-in nav a[href="skicka-in.html"] {
+  border: 2px solid #FFBFA3;
+  background-color: #FFBFA3;
+  color: #fff;
+}
+
+/* ---------------- MAIN ---------------- */
+main {
+  grid-area: main;
+  padding: 20px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ---------------- STARTKORT ---------------- */
+.startkort {
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  padding: 15px;
+  background-color: #FFF0F3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 4px solid #FFBFA3;
+}
+
+.startkort h2 {
+  border-bottom: 2px solid #FFC9B8;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.recept-knapp-start {
+  display: inline-block;
+  justify-content: flex-start;
+  background-color: #FFF5F7;
+  border: 1px solid #FFE0E6;
+  padding: 12px;
+  margin: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.5s ease;
+}
+
+.recept-knapp-start img {
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+/* ---------------- BILDER ---------------- */
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ---------------- KNAPPAR ---------------- */
+a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.skicka-in-knapp-start,
+.tillbaka-knapp,
+.rapport-knapp {
+  display: inline-block;
+  text-decoration: none;
+  color: #4B3F36;
+  background-color: #FFF0F3;
+  padding: 10px 18px;
+  margin: 5px 0;
+  border: 1px solid #E0D6CE;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 500;
+}
+
+.recept-knapp-start:hover,
+.skicka-in-knapp-start:hover,
+.tillbaka-knapp:hover,
+.rapport-knapp:hover {
+  background-color: #FFD6C2;
+  color: #3A2E26;
+  transform: scale(1.03);
+}
+
+/* ---------------- RECEPTLISTA ---------------- */
+.receptlista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.receptlista h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FFC9B8;
+  padding-bottom: 5px;
+}
+
+.receptkort {
+  flex: 1 1 250px;
+  background-color: #FFF5F7;
+  border: 1px solid #FFE0E6;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.receptkort img {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.receptkort:hover {
+  transform: scale(1.03);
+  background-color: #FFEDE4;
+}
+
+/* ---------------- RECEPTDETALJ ---------------- */
+
+.recept-info {
+  max-width: 100%;
+  margin: 10px auto 20px auto;
+  padding: 15px;
+  background-color: #FFF0F3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 4px solid #FFBFA3;
+}
+
+.recept-info h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FFC9B8;
+  padding-bottom: 5px;
+}
+
+.recept-bild {
+  text-align: center;
+}
+
+.recept-bild h2 {
+  border-bottom: 2px solid #FFC9B8;
+}
+
+
+/* ---------------- FORM ---------------- */
+form {
+  width: 80%;
+  max-width: 900px;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skicka-in-layout h2 {
+  text-align: center;
+}
+
+.maskin-val {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.maskin-val label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="submit"],
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #D8CFC5;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input[type="submit"]:hover {
+  background-color: #d1ffc2;
+  color: #3A2E26;
+  transform: scale(1.02);
+}
+
+/* ---------------- ASIDE & TIP-BLOCK ---------------- */
+aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-box {
+  background-color: #FFF5F7;
+  border: 1px solid #FFE0E6;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  margin: 10px;
+}
+
+.tip-box h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #A65D64;
+  border-bottom: 1px solid #FFE0E6;
+  padding-bottom: 5px;
+}
+
+.tip-box ul {
+  padding-left: 20px;
+}
+
+.tip-box li {
+  margin-bottom: 6px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  grid-area: footer;
+  background-color: #FFF0F3;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #4B3F36;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.03);
+}
+
+.footer-content {
+  margin: 1em;
+}
+
+.footer-content h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content img {
+  height: 50px;
+  width: auto;
+}
+
+.rapport-knapp {
+  width: 100%;
+  max-width: 330px;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/*Mycket små skärmar: max 400px*/
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  .receptkort,
+  .recept-knapp-start,
+  .rapport-knapp {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+/* Små skärmar: max 1000px */
+@media screen and (max-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "receptlista"
+    "aside";
+  }
+  
+  aside {
+    grid-area: aside;
+  }
+  .receptlista {
+    grid-area: receptlista;
+  }
+
+  .recept-bild img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  }
+}
+/* Stora skärmar: min 1000px */
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  header img {
+  width: 250px;
+  }
+
+  main {
+    max-width: 1200px;
+  }
+
+  main.recept-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "tillbaka-knapp . "
+    "recept-bild recept-bild"
+    "receptdetalj receptdetalj";
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .tillbaka-knapp {
+    grid-area: tillbaka-knapp;
+  }
+
+  .receptdetalj {
+    grid-area: receptdetalj;
+  }
+
+  .recept-bild {
+    grid-area: recept-bild;
+  }
+
+  .recept-bild img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  aside {
+    display: block;
+    background-color: #FFF5F7;
+    padding: 15px;
+    margin-top: -15px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 2px auto;
+  }
+
+  nav a {
+    width: auto;
+    height: 20px;
+    flex: 1;
+    min-width: 100px;
+    max-width: 200px;
+    padding: 10px 20px;
+  }
+
+  .lokal-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .lokal-nav a {
+    padding: 6px 18px;
+    border: 1px solid #E0D6CE;
+    background-color: #FFF0F3;
+  }
+
+  .lokal-nav a:hover {
+    background-color: #FFD6C2;
+    color: #3A2E26;
+  }
+
+  .lokal-nav-mobil {
+    display: none;
+  }
+
+  .tillbaka-knapp {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    height: 20px;
+  }
+  .receptkort {
+    flex: 1 1 185px;
+  }
+
+  main .om-oss {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: 
+    "om-oss om-oss"
+    "lab-bild mission"
+    "lab-bild erbjuder";
+  }
+
+  #om-oss {
+    grid-area: om-oss;
+  }
+
+  #lab-bild {
+    grid-area: lab-bild;
+  }
+  #mission {
+    grid-area: mission;
+  }
+  #erbjuder {
+    grid-area: erbjuder;
+  }
+
+  .footer-content {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 30px 0 30px;
+  }
+}
