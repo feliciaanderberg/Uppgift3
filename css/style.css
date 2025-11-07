@@ -283,10 +283,14 @@ textarea {
   min-height: 100px;
   resize: vertical;
 }
-
-input[type="submit"]:hover {
+input[type="submit"] {
   background-color: #d1ffc2;
   color: #3A2E26;
+  transform: scale(1.02);
+}
+input[type="submit"]:hover {
+  background-color: #39672a;
+  color: #FFEDE4;
   transform: scale(1.02);
 }
 
